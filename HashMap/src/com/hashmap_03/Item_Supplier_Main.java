@@ -1,6 +1,7 @@
 package com.hashmap_03;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Set;
 
@@ -31,6 +32,7 @@ public class Item_Supplier_Main {
 		}
 	}
 	
+
 	
 	public static void main(String[] args) 
 	{
@@ -124,7 +126,7 @@ public class Item_Supplier_Main {
 		hs.put(s6, i6);
 		
 		priceWiseShow(hs);
-		System.out.println();
+		System.out.println("----------------------------------");
 		showNameWise(hs);
 
 	}
