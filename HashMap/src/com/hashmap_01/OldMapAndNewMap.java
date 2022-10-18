@@ -50,7 +50,7 @@ public class OldMapAndNewMap {
 		Collection<Character> value= oldmap.values();
 		
 		ArrayList<Character> c=new ArrayList<Character>(value);
-		
+		//System.out.println(c);
 		
 		HashMap<Character, Integer> newmap=counting(c);
 		

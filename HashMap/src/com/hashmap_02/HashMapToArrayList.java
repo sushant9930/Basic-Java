@@ -34,7 +34,11 @@ public class HashMapToArrayList {
 		ArrayList<Entry<Integer, String>> list=
 				new ArrayList<Entry<Integer, String>>(entrySet);
 		System.out.println(list);
-
+		Iterator<Entry<Integer, String>> itr=list.iterator();
+		while(itr.hasNext()) 
+		{
+			System.out.println(itr.next());
+		}
 		
 		///
 		
