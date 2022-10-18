@@ -7,9 +7,8 @@ public class Automorphic {
 	static boolean auto(int n) 
 	{
 		//int num=n;
-		int sqr=n*n, count=0;
-		
-		while(n>0)		
+		int sqr=n*n;
+		while(n>0) 
 		{
 			if(n%10 != sqr%10) 
 			{
@@ -19,7 +18,6 @@ public class Automorphic {
 			sqr/=10;
 		}
 		return true;
-		
 	}
 
 	public static void main(String[] args) 
