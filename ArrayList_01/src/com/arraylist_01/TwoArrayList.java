@@ -15,6 +15,7 @@ public class TwoArrayList {
 		al.add("wed");
 		al.add("mon");
 		
+	
 		System.out.println(al);
 		
 		LinkedHashSet<String> hs=new LinkedHashSet<String>(al);
