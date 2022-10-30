@@ -20,14 +20,14 @@ public class MapToMap {
 		hm.put(50, "Swapnil");
 		
 		TreeMap<Integer, String> tm=new TreeMap<Integer, String>(hm);
-		Set<Entry<Integer, String>> entry = tm.entrySet();
-		for(Entry<Integer, String> en : entry) 
+		//Set<Entry<Integer, String>> entry = tm.entrySet();
+		for(Entry<Integer, String> en : tm.entrySet()) 
 		{
 			System.out.println(en.getKey()+" "+en.getValue());
 		}
 		
 		System.out.println("-----------------------------------");
-		Iterator<Entry<Integer, String>> itr = entry.iterator();
+		Iterator<Entry<Integer, String>> itr = tm.entrySet().iterator();
 		while(itr.hasNext()) 
 		{
 			System.out.println(itr.next());

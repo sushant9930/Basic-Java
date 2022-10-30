@@ -3,6 +3,8 @@ package com.hashmap_01;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 import java.util.HashMap;
 
 public class ArrayListToHashMap {
@@ -10,10 +12,12 @@ public class ArrayListToHashMap {
 	static HashMap<String, Integer> convertArrayToHashMap(ArrayList<String> al, ArrayList<Integer>al1)
 	{
 		HashMap<String, Integer> hs=new HashMap<>();
-		for(String str : al) 
+		Iterator<String> itr=al.iterator();
+		while(itr.hasNext()) 
 		{
-			
-		}
+			String s =itr.next();
+			Iterator<Integer> itr_01=al1.iterator();
+				}
 		return hs;
 		
 	}
@@ -35,7 +39,15 @@ public class ArrayListToHashMap {
 		al1.add(50);
 		al1.add(60);
 		
-		
+		HashMap<String, Integer> hs_01=convertArrayToHashMap(al,al1);
+		Set<Entry<String, Integer>> set=hs_01.entrySet();
+		Iterator<Entry<String, Integer>> itr=set.iterator();
+		while(itr.hasNext()) 
+		{
+			String s =itr.next().getKey();
+			Integer i= itr.next().getValue();
+			System.out.println(s+" "+i);
+		}
 		
 
 	}
