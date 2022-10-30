@@ -1,17 +1,16 @@
 package com.hashmap_05;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
+import java.util.Map.Entry;
 
-import com.hashmap_05.*;
-public class Show_Room_Main {
+public class ShowRoom_Main_01 {
 
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
+		
 		Car c1=new Car();
 		c1.setC_id(125);
 		c1.setC_name("Tata Motors");
@@ -84,7 +83,7 @@ public class Show_Room_Main {
 		sr7.setC(c1);
 		
 		
-		HashMap<String, HashMap<String, String>> hm=new HashMap<String, HashMap<String,String>>();
+		HashMap<String, ArrayList<String>> hm=new HashMap<String, ArrayList<String>>();
 		HashSet<Show_Room> hs=new HashSet<Show_Room>();
 		hs.add(sr1);
 		hs.add(sr2);
@@ -98,34 +97,30 @@ public class Show_Room_Main {
 		while(itr.hasNext()) 
 		{
 			Show_Room  s=itr.next();
-			if(hm.containsKey(s.getS_name())) 
+			if(hm.containsKey(s.c.getC_name())) 
 			{
-				HashMap<String, String> hm_01=hm.get(s.getS_name());
-				String s1=s.getS_location();
+				ArrayList<String> al=hm.get(s.c.getC_name());
+				String s1=s.getS_name();
+				al.add(s1);
 				String s2=s.c.getC_name();
-				hm_01.put(s1, s2);
-
-				String s3=s.getS_name();
-				hm.put(s3, hm_01);
-				//System.out.println(hm_01);
+				hm.put(s2, al);
 			}
 			else 
 			{
-				HashMap<String,String> hm_01=new HashMap<String,String>();
-				String s1 =s.getS_location();
-				String s2 = s.c.getC_name();
-				hm_01.put(s1, s2);
-				String s3 = s.getS_name();
-				hm.put(s3, hm_01);
+				ArrayList<String> al=new ArrayList<>();
+				String s1=s.getS_name();
+				al.add(s1);
+				String s2=s.c.getC_name();
+				hm.put(s2, al);
 			}
 		}
-		Set<Entry<String, HashMap<String, String>>> st=hm.entrySet();
-		for(Entry<String, HashMap<String,String>> en : st) 
+		Set<Entry<String, ArrayList<String>>> st=hm.entrySet();
+		for(Entry<String, ArrayList<String>> en : st) 
 		{
 			System.out.println(en.getKey());
 			System.out.println(en.getValue());
 		}
-		
+
 	}
 
 }
