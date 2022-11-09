@@ -25,6 +25,12 @@ public class Creat_HashMap
 		}
 		return hm;	
 	}
+	
+	static void sortingRating(HashMap<String, Float> hm) 
+	{
+		TreeMap<String, Float> tm=new TreeMap<String, Float>();
+		
+	}
 	public static void main(String[] args) {
 		
 		Car c1=new Car();
