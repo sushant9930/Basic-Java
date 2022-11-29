@@ -1,13 +1,17 @@
 package com.hashmap_01;
 
 import java.util.Map;
+import java.util.NavigableMap;
+import java.util.SortedMap;
+import java.util.TreeMap;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 public class DiffIterator {
 
 	public static void main(String[] args) 
 	{
-		Map<Integer, String> m=new HashMap<Integer, String>();
+		HashMap<Integer, String> m=new HashMap<Integer, String>();
 		
 		m.put(1, "Sushant");
 		m.put(2,  "Neha");
@@ -18,6 +22,13 @@ public class DiffIterator {
 		m.put(7, "Rohan");
 		m.put(8, "Ashwin");
 		
+		TreeMap<Integer, String> tm=new TreeMap<Integer, String>();
+		tm.putAll(m);
+		System.out.println(tm.descendingMap());
+		
+		
+		
+	/*	
 		// using enhance for loop iteration over Map.entrySet()
 		for(Map.Entry<Integer, String> e: m.entrySet()) 
 		{
@@ -55,6 +66,7 @@ public class DiffIterator {
 		System.out.println("----------------------------------------");
 		//forEach(action) method to iterate map
 		m.forEach((K,V) -> System.out.println(K+" "+V));
+		*/
 	}
 
 }
