@@ -48,6 +48,7 @@ public class Supplier_Item {
 		i4.setI(s3);
 		
 		HashMap<String, ArrayList<String>> hm=new HashMap<String, ArrayList<String>>();
+		
 		HashSet<Supplier> hs=new HashSet<Supplier>();
 		hs.add(i1);
 		hs.add(i2);
@@ -60,9 +61,12 @@ public class Supplier_Item {
 			Supplier s=itr.next();
 			if(hm.containsKey(s.getS_name()))
 			{
+				
 				ArrayList<String> al=hm.get(s.getS_name());
 				String s11=s.i.getI_name();
 				al.add(s11);
+				
+				
 				String s12=s.getS_name();
 				hm.put(s12, al);				
 			}
@@ -71,6 +75,7 @@ public class Supplier_Item {
 				ArrayList<String> al=new ArrayList<String>();
 				String s11=s.i.getI_name();
 				al.add(s11);
+				
 				String s12=s.getS_name();
 				hm.put(s12, al);
 			}
